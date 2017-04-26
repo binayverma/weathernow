@@ -21,13 +21,13 @@ new WebpackDevServer(webpack(config), {
       chunks: false,
       chunkModules: false
     },
-    proxy: {
-        '/data/**': {
-            target: 'http://api.openweathermap.org/',
-            secure: false,
-            changeOrigin: true
-        }
-    }
+    // proxy: {
+    //     '/data/**': {
+    //         target: 'http://api.openweathermap.org/',
+    //         secure: false,
+    //         changeOrigin: true
+    //     }
+    // }
 }).listen(3000, 'localhost', function (err) {
     if (err) {
         console.log(err);
