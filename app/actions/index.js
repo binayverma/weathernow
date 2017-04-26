@@ -6,7 +6,7 @@ export function getWeather(text) {
             type: 'Loading'
         });
         request({
-            url: `/data/2.5/forecast?q=${text}&appid=ac24a7211b9c5e9951bafb9bf742e305`,
+            url: `http://api.openweathermap.org/data/2.5/forecast?q=${text}&appid=ac24a7211b9c5e9951bafb9bf742e305`,
             method: 'get'
         })
         .then((res) => {
