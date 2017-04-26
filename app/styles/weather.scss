@@ -1,0 +1,67 @@
+body {
+  font-family: 'Roboto', 'Raleway', sans-serif;
+  background-color: #eee;
+}
+.table-conatiner {
+  margin: 10px;
+  overflow-x: auto;
+}
+.content-rotate {
+  transform: rotateX(180deg);
+}
+h3 {
+  text-align: center
+}
+#root > div > div {
+  padding-top: 51px
+}
+.cap {
+  text-transform: capitalize
+}
+.jumbotron {
+  padding-right: 15px !important;
+  color: #fff !important;
+  background: #1A2980;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  p{
+    font-weight: 300;
+  }
+  &.welcome{
+    padding-left: 10px;
+    margin-bottom: 0px;
+  }
+}
+.weather-container {
+  overflow: auto;
+}
+.weather-container table {
+  white-space: nowrap;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-bottom: 0px;
+  tr th{
+    background-color: #C0DCEA;
+    text-transform: uppercase;
+  }
+  tr td {
+    vertical-align: middle;
+  }
+}
+
+.time-icon {
+  min-width: 148px;
+}
+
+.degree {
+  float: right;
+  color: #ccc;
+  padding: 16px 5px 8px 5px;
+  cursor: pointer;
+  &.degree-selected,
+  &.degree:hover{
+    color: #fff
+  }
+}
+
+

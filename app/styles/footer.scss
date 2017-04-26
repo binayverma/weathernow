@@ -1,0 +1,18 @@
+.footer {
+  padding: 10px !important;
+  width: 100%;
+	bottom: 0px;
+  background-color: #DCDCDC;
+  position: absolute;
+	a {
+    color: #000;
+		padding: 5px 5px 5px 0;
+    text-decoration: none;
+    font-weight: 400;
+	}
+}
+.view-login {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
