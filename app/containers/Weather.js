@@ -25,7 +25,7 @@ class Weather extends Component {
               status === 'content' ?
                 <div>
                   <div className="jumbotron">
-                    <h2 className="text-center"> {data.cityName} </h2>
+                    <h1 className="text-center city"> {data.cityName} </h1>
                     <h3>
                       {formatTemp(firstDay.main.temp, unit)}
                     </h3>
