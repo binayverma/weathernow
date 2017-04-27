@@ -27,18 +27,20 @@ class Weather extends Component {
                     <h3>
                       {formatTemp(firstDay.main.temp, unit)}
                     </h3>
-                    <p className="pull-left col-md-4 col-sm-4">
-                      Low: <span>{formatTemp(firstDay.main.temp_min, unit)}</span>
-                    </p>
-                    <p className="text-center col-md-4 col-sm-4 cap">
-                      <span>{firstDay.weather[0].description}</span>
-                      <span>
-                        <img className="text-center" src={`http://openweathermap.org/img/w/${firstDay.weather[0].icon}.png`} />
-                      </span>
-                    </p>
-                    <p className="pull-right">
-                      High: <span>{formatTemp(firstDay.main.temp_max, unit)}</span>
-                    </p>
+                    <div className="row status-content">
+                      <div className="col col-xs-3">
+                        Low: <span>{formatTemp(firstDay.main.temp_min, unit)}</span>
+                      </div>
+                      <div className="col col-xs-6 current-desc">
+                        <span>{firstDay.weather[0].description}</span>
+                        <span>
+                          <img className="text-center" src={`http://openweathermap.org/img/w/${firstDay.weather[0].icon}.png`} />
+                        </span>
+                      </div>
+                      <div className="col col-xs-3">
+                        High: <span>{formatTemp(firstDay.main.temp_max, unit)}</span>
+                      </div>
+                    </div>
                   </div>
                   <div className="table-conatiner content-rotate">
                     <table className="table table-responsive content-rotate">

@@ -5,6 +5,7 @@ body {
 .table-conatiner {
   margin: 10px;
   overflow-x: auto;
+  background-color: #fff;
 }
 .content-rotate {
   transform: rotateX(180deg);
@@ -19,7 +20,6 @@ h3 {
   text-transform: capitalize
 }
 .jumbotron {
-  padding-right: 15px !important;
   color: #fff !important;
   background: #1A2980;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
@@ -38,7 +38,6 @@ h3 {
 .weather-container table {
   white-space: nowrap;
   border-collapse: collapse;
-  background-color: #fff;
   margin-bottom: 0px;
   tr th{
     background-color: #C0DCEA;
@@ -63,5 +62,36 @@ h3 {
     color: #fff
   }
 }
+.status-content {
+  margin: 0;
+  font-size: 21px;
+  .col {
+    padding: 0;
+    &:first-child {
+      padding-left: 10px;
+      text-align: left;
+    }
+    &:last-child {
+      padding-right: 10px;
+      text-align: right;
+    }
+  }
 
+  .current-desc {
+    text-align: center;
+    margin-top: -10px;
+    text-transform: capitalize;
+  }
 
+}
+
+@media (max-width: 700px) {
+  .status-content {
+    font-size: 16px;
+    .current-desc {
+      img {
+        max-height: 42px;
+      }
+    }
+  }
+}
