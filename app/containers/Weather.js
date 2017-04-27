@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { getWeather } from '../actions';
 import Welcome from '../components/Welcome';
 import '../styles/weather.scss';
+import moment from 'moment';
+
 class Weather extends Component {
 
     constructor(props) {
@@ -62,16 +64,14 @@ class Weather extends Component {
                             return (<tbody>
                             {
                                 data.days[key].map((day) => {
-                                    const date = new Date(day.dt_txt);
-                                    const weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
                                     const icon = `http://openweathermap.org/img/w/${day.weather[0].icon}.png`;
                                     return (
                                       <tr>
                                         <td>
                                           <div style={{ width: '90%' }} className="pull-left ">
-                                            <strong>{date.getHours()}h</strong>
+                                            <strong>{moment(day.dt_txt).format('HH')}h</strong>
                                             <div>
-                                              <small className="text-nowrap">{key} {weekday[date.getDay()]}</small>
+                                              <small className="text-nowrap">{moment(day.dt_txt).format('MM-DD-YYYY ddd')}</small>
                                             </div>
                                           </div>
                                           <div style={{ width: '10%' }} className="pull-right">

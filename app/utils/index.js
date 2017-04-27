@@ -1,4 +1,5 @@
 import _ from 'underscore';
+import moment from 'moment';
 export function processResponse(payload) {
     const res = {
         cityName: payload.city.name
@@ -6,12 +7,11 @@ export function processResponse(payload) {
     let list = payload.list;
     list = list.map((item) => {
         return {
-            ...item,
-            date: new Date(item.dt_txt)
+            ...item
         };
     });
     list = _.groupBy(list, (item) => {
-        return (item.date.getMonth() + 1) + '-' + item.date.getDate()  + '-' + item.date.getFullYear();
+        return moment(item.dt_txt).format('MM-DD-YYYY');
     });
     res.days = list;
     return res;
