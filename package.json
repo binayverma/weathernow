@@ -1,5 +1,5 @@
 {
-  "name": "webpack-react-redux",
+  "name": "weathernow-webpack-react-redux",
   "version": "1.0.0",
   "description": "A boilerplate for playing around with react, redux and react-router with the help of webpack.",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "react",
     "redux"
   ],
-  "author": "Jean-Pierre Sierens",
+  "author": "Binay Verma",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.7",
