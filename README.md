@@ -1,5 +1,5 @@
 
-# webpack-react-redux
+# weathernow
 A boilerplate for playing around with react, redux and react-router with the help of webpack.
 
 Contains: 
