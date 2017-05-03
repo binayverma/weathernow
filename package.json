@@ -4,7 +4,7 @@
   "description": "A boilerplate for playing around with react, redux and react-router with the help of webpack.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "start": "node server",
     "build": "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors && cp -R assets dist/assets",
     "eslint": "eslint ."
