@@ -32,3 +32,10 @@ The app updates without the browser having to reload. You don't lose state!
 ```npm run build```
 
 This will build the app into the "dist" directory in the root of the project. It contains the index.html along with the minified assets, ready for production.
+
+## Test the app
+```npm test```
+or
+```npm t```
+
+'Jest' is used for Unit testing and code coverage.
