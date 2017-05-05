@@ -5,7 +5,7 @@ export function getWeather(text) {
         dispatch({
             type: 'Loading'
         });
-        request({
+        return request({
             url: `http://api.openweathermap.org/data/2.5/forecast?q=${text}&appid=ac24a7211b9c5e9951bafb9bf742e305`,
             method: 'get'
         })
@@ -21,7 +21,7 @@ export function getWeather(text) {
             console.log('error', error);
             dispatch( {
                 type: 'FETCH_WEATHER_ERROR',
-                payload: 'Error: asd'
+                payload: 'Error: Error in fetching data.'
             });
             dispatch({
                 type: 'Error'

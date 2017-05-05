@@ -34,5 +34,6 @@ test('process Response', () => {
 
 test('Format degree', () => {
   expect(formatTemp(300.15, 'c')).toBe("27°");
+  expect(formatTemp(300.15, 'f')).toBe("81°");
 });
 

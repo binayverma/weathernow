@@ -1,3 +1,5 @@
+// import fetch from 'isomorphic-fetch';
+
 export default function request(obj) {
     switch(obj.method) {
         case 'get':

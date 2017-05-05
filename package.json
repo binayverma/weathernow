@@ -4,7 +4,7 @@
   "description": "A boilerplate for playing around with react, redux and react-router with the help of webpack.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "start": "node server",
     "build": "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors && cp -R assets dist/assets",
     "eslint": "eslint ."
@@ -20,6 +20,7 @@
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "file-loader": "^0.9.0",
+    "isomorphic-fetch": "^2.2.1",
     "moment": "^2.18.1",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
@@ -29,6 +30,7 @@
     "react-router-redux": "^4.0.4",
     "redux": "^3.5.2",
     "redux-logger": "^3.0.1",
+    "redux-mock-store": "^1.2.3",
     "redux-thunk": "^2.2.0",
     "underscore": "^1.8.3"
   },
@@ -43,6 +45,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "enzyme": "^2.8.2",
     "eslint": "^2.9.0",
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^5.0.1",
@@ -50,6 +53,7 @@
     "html-webpack-plugin": "^2.16.1",
     "jest": "^19.0.2",
     "jest-cli": "^19.0.2",
+    "jest-fetch-mock": "^1.1.1",
     "json-loader": "^0.5.4",
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",
@@ -72,6 +76,9 @@
     ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
-    }
+    },
+    "setupFiles": [
+      "./setupJest.js"
+    ]
   }
 }

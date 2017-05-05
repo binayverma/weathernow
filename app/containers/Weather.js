@@ -6,7 +6,7 @@ import Welcome from '../components/Welcome';
 import '../styles/weather.scss';
 import moment from 'moment';
 
-class Weather extends Component {
+export class WeatherContainer extends Component {
 
     constructor(props) {
         super(props);
@@ -122,7 +122,7 @@ class Weather extends Component {
     }
 }
 
-Weather.propTypes = {
+WeatherContainer.propTypes = {
     weather: PropTypes.object,
     getWeather: PropTypes.func
 };
@@ -142,4 +142,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Weather);
+)(WeatherContainer);

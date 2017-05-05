@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 import '../styles/loader.scss';
-class Loader extends Component {
+export class LoaderComponent extends Component {
 
     constructor(props) {
         super(props);
@@ -16,7 +16,7 @@ class Loader extends Component {
     }
 }
 
-Loader.propTypes = {
+LoaderComponent.propTypes = {
     loader: PropTypes.string
 };
 
@@ -33,4 +33,4 @@ const mapDispatchToProps = () => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Loader);
+)(LoaderComponent);
